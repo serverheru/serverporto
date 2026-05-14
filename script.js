@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ghLink = document.getElementById('gh-link');
     const ghReposContainer = document.getElementById('gh-repos-container');
     const ghStatsImg = document.getElementById('gh-stats-img');
+    const ghContribImg = document.getElementById('gh-contrib-img');
 
     if (ghUsernameDisplay) {
         ghUsernameDisplay.textContent = '@' + githubUsername;
@@ -100,6 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         }
 
+        // Memasang Widget Kontribusi (Titik Hijau)
+        if(ghContribImg) {
+            ghContribImg.src = `https://ghchart.rshah.org/${githubUsername}`;
+            ghContribImg.onload = () => {
+                ghContribImg.classList.remove('hidden');
+            };
+            ghContribImg.onerror = () => {
+                ghContribImg.parentElement.innerHTML = '<p class="text-gray-500 text-sm mt-4">Gagal memuat grafik kontribusi.</p>';
+            };
+        }
+
         // Fetch Data Profil GitHub
         fetch(`https://api.github.com/users/${githubUsername}`)
             .then(response => response.json())
@@ -116,8 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error memuat profil GitHub:', error));
 
-        // Fetch Repositori Terbaru (Maksimal 4)
-        fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=4`)
+        // Fetch Repositori Terbaru (Maksimal 3)
+        fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`)
             .then(response => response.json())
             .then(repos => {
                 ghReposContainer.innerHTML = ''; // Bersihkan skeleton loading
