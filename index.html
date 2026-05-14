@@ -484,8 +484,12 @@
                  <!-- GitHub Contribution Graph -->
                  <div class="w-full max-w-4xl bg-[#0a0a0a] border border-gray-800 rounded-2xl p-6 glow-green relative overflow-hidden">
                      <h3 class="text-white font-bold text-left mb-6 text-lg"><i class="fas fa-calendar-check mr-2 text-green-500"></i>Grafik Kontribusi</h3>
-                     <div class="overflow-x-auto pb-4">
-                         <img id="gh-contrib-img" src="" alt="GitHub Contributions" class="min-w-[700px] hidden opacity-90 hover:opacity-100 transition duration-300 w-full" style="filter: invert(1) hue-rotate(180deg) contrast(1.2);">
+                     <div class="overflow-x-auto pb-4 relative min-h-[150px]">
+                         <!-- Skeleton Loader -->
+                         <div id="gh-contrib-skeleton" class="absolute inset-0 flex items-center justify-center bg-[#0a0a0a] z-0">
+                             <div class="text-gray-500 text-sm animate-pulse"><i class="fas fa-spinner fa-spin mr-2"></i>Memuat grafik kontribusi...</div>
+                         </div>
+                         <img id="gh-contrib-img" src="" alt="GitHub Contributions" class="min-w-[700px] opacity-0 transition-opacity duration-500 w-full relative z-10 hover:opacity-100" style="filter: invert(1) hue-rotate(180deg) contrast(1.2); transform: translateZ(0); will-change: filter, opacity;">
                      </div>
                  </div>
             </div>

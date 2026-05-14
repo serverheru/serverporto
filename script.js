@@ -103,12 +103,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Memasang Widget Kontribusi (Titik Hijau)
         if(ghContribImg) {
+            const skeleton = document.getElementById('gh-contrib-skeleton');
             ghContribImg.src = `https://ghchart.rshah.org/${githubUsername}`;
             ghContribImg.onload = () => {
-                ghContribImg.classList.remove('hidden');
+                if (skeleton) skeleton.classList.add('hidden');
+                ghContribImg.classList.remove('opacity-0');
+                ghContribImg.classList.add('opacity-90');
             };
             ghContribImg.onerror = () => {
-                ghContribImg.parentElement.innerHTML = '<p class="text-gray-500 text-sm mt-4">Gagal memuat grafik kontribusi.</p>';
+                if (skeleton) skeleton.classList.add('hidden');
+                ghContribImg.parentElement.innerHTML = '<p class="text-gray-500 text-sm mt-4 text-center"><i class="fas fa-exclamation-circle text-yellow-500 mr-2"></i>Gagal memuat grafik kontribusi. Coba muat ulang beberapa saat lagi.</p>';
             };
         }
 
