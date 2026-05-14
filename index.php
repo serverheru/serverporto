@@ -1,0 +1,521 @@
+<?php
+// Halaman Portofolio
+?>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Software Engineer</title>
+    <!-- Menggunakan Tailwind CSS dari CDN untuk desain UI yang cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-gray-200 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#beranda" class="flex-shrink-0 font-bold text-2xl tracking-tighter text-white hover:text-gray-300 transition">
+                    Dev<span class="text-blue-500">.</span>Portfolio
+                </a>
+                <div class="hidden xl:flex space-x-4 xl:space-x-5 text-xs xl:text-sm">
+                    <a href="#beranda" class="text-gray-400 hover:text-red-500 transition font-medium">Beranda</a>
+                    <a href="#tentang" class="text-gray-400 hover:text-yellow-500 transition font-medium">Tentang</a>
+                    <a href="#layanan" class="text-gray-400 hover:text-green-500 transition font-medium">Layanan</a>
+                    <a href="#pengalaman" class="text-gray-400 hover:text-blue-500 transition font-medium">Pengalaman</a>
+                    <a href="#pendidikan" class="text-gray-400 hover:text-yellow-500 transition font-medium">Pendidikan</a>
+                    <a href="#sertifikat" class="text-gray-400 hover:text-blue-500 transition font-medium">Sertifikat</a>
+                    <a href="#proyek" class="text-gray-400 hover:text-green-500 transition font-medium">Proyek</a>
+                    <a href="#github" class="text-gray-400 hover:text-white transition font-medium">GitHub</a>
+                    <a href="#kontak" class="text-gray-400 hover:text-blue-500 transition font-medium">Kontak</a>
+                </div>
+                <!-- Tombol Menu HP -->
+                <div class="xl:hidden">
+                    <button id="hamburger-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Dropdown HP -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-black/95 border-b border-gray-900 absolute w-full max-h-[80vh] overflow-y-auto">
+            <a href="#beranda" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-red-500 transition border-b border-gray-900/50">Beranda</a>
+            <a href="#tentang" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-yellow-500 transition border-b border-gray-900/50">Tentang</a>
+            <a href="#layanan" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-green-500 transition border-b border-gray-900/50">Layanan</a>
+            <a href="#pengalaman" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition border-b border-gray-900/50">Pengalaman</a>
+            <a href="#pendidikan" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-yellow-500 transition border-b border-gray-900/50">Pendidikan</a>
+            <a href="#sertifikat" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition border-b border-gray-900/50">Sertifikat</a>
+            <a href="#proyek" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-green-500 transition border-b border-gray-900/50">Proyek</a>
+            <a href="#github" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-white transition border-b border-gray-900/50">GitHub</a>
+            <a href="#kontak" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="min-h-screen pt-32 pb-20 flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
+        <div class="flex-1 text-center md:text-left scroll-animate">
+            <h2 class="text-gray-400 font-semibold tracking-widest uppercase text-xs mb-3">Halo, perkenalkan saya</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Seorang <br class="hidden md:block" />
+                <span id="typing-text" class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"></span><span class="typing-cursor">|</span>
+            </h1>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                Seorang mahasiswa Perpustakaan dan Sains Informasi dengan semangat eksplorasi tinggi di bidang teknologi, data analitik, dan seni visual.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#proyek" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition glow-white transform hover:-translate-y-1 text-sm sm:text-base">Lihat Karya Saya</a>
+                <a href="#kontak" class="px-8 py-4 bg-transparent text-white font-medium rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-400 transition transform hover:-translate-y-1 text-sm sm:text-base">Hubungi Saya</a>
+                <a href="./dokument/CV.pdf" target="_blank" download="CV_Lalu_Hairul_Umam.pdf" class="px-8 py-4 bg-[#0a0a0a] text-gray-300 font-medium rounded-full border border-gray-800 hover:border-green-500 hover:text-green-400 transition transform hover:-translate-y-1 text-sm sm:text-base"><i class="fas fa-file-download mr-2"></i> Unduh CV</a>
+            </div>
+        </div>
+        <div class="flex-1 w-full max-w-md relative scroll-animate float-animate">
+            <!-- Foto Profil -->
+            <div class="aspect-square bg-black rounded-full flex flex-col items-center justify-center border-4 border-gray-800 shadow-[0_0_50px_rgba(255,255,255,0.05)] overflow-hidden relative group hover:border-white transition duration-500">
+                <img src="image/Profile.jpeg" alt="Foto Profil" class="w-full h-full object-cover z-10 transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-black/20 z-20 pointer-events-none"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang & Keahlian -->
+    <section id="tentang" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Keahlian & Teknologi</h2>
+                <div class="flex justify-center gap-2">
+                    <div class="w-8 h-1 bg-red-500 rounded-full"></div>
+                    <div class="w-8 h-1 bg-yellow-500 rounded-full"></div>
+                    <div class="w-8 h-1 bg-green-500 rounded-full"></div>
+                    <div class="w-8 h-1 bg-blue-500 rounded-full"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Saya adalah mahasiswa <span class="text-white font-bold">Perpustakaan dan Sains Informasi di UIN Malang</span> yang memiliki minat besar di bidang Software Engineering, Web/App Dev, serta eksplorasi Data Science & Engineer.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Selain dunia kode dan big data, saya juga antusias di dunia kreatif. Saya memiliki ketertarikan kuat dalam bidang <span class="text-white font-bold">Fotografi, Videografi, dan Editing</span> yang sering saya tuangkan menggunakan kamera andalan saya, Sony A5100.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-5 scroll-animate">
+                    <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-gray-800 flex items-center gap-4 transition duration-300 transform glow-red cursor-default">
+                        <i class="fab fa-laravel text-4xl text-red-500"></i>
+                        <span class="font-semibold text-white">PHP / Laravel</span>
+                    </div>
+                    <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-gray-800 flex items-center gap-4 transition duration-300 transform glow-yellow cursor-default">
+                        <i class="fab fa-js-square text-4xl text-yellow-500"></i>
+                        <span class="font-semibold text-white">JavaScript</span>
+                    </div>
+                    <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-gray-800 flex items-center gap-4 transition duration-300 transform glow-blue cursor-default">
+                        <i class="fab fa-python text-4xl text-blue-500"></i>
+                        <span class="font-semibold text-white">Python</span>
+                    </div>
+                    <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-gray-800 flex items-center gap-4 transition duration-300 transform glow-green cursor-default">
+                        <i class="fab fa-android text-4xl text-green-500"></i>
+                        <span class="font-semibold text-white">Kotlin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="layanan" class="py-24 bg-black border-t border-gray-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Layanan & Spesialisasi</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-blue group">
+                    <i class="fas fa-code text-4xl text-blue-500 mb-6 transform group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">Web Development</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Membangun website responsif dan cepat menggunakan teknologi modern secara efisien.</p>
+                </div>
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-green group">
+                    <i class="fas fa-chart-line text-4xl text-green-500 mb-6 transform group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">Data Analyst & Science</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Menganalisis pola data serta membangun model untuk mendapatkan wawasan (insight) yang bernilai.</p>
+                </div>
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-yellow group">
+                    <i class="fas fa-camera-retro text-4xl text-yellow-500 mb-6 transform group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">Fotografi & Videografi</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Mendokumentasikan momen dan memproduksi karya visual ciamik (didukung oleh Sony A5100).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Organisasi -->
+    <section id="pengalaman" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Pengalaman Organisasi</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Org 1 -->
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-red relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition duration-500">
+                        <i class="fas fa-users text-8xl text-red-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-4 py-1.5 bg-black border border-red-900/50 text-red-400 text-xs font-bold tracking-wide rounded-full mb-5 inline-block">2025</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Ketua Himpunan</h3>
+                        <h4 class="text-lg text-gray-400 mb-4 font-medium">Himpunan Perpustakaan dan Sains Informasi</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Memimpin himpunan mahasiswa dalam mengorganisir berbagai program kerja, pengembangan potensi mahasiswa, dan mewadahi aspirasi anggota.</p>
+                    </div>
+                </div>
+                <!-- Org 2 -->
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-blue relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition duration-500">
+                        <i class="fas fa-book-reader text-8xl text-blue-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-4 py-1.5 bg-black border border-blue-900/50 text-blue-400 text-xs font-bold tracking-wide rounded-full mb-5 inline-block">2024</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Pendiri Komunitas</h3>
+                        <h4 class="text-lg text-gray-400 mb-4 font-medium">Sumbu Literasi</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Mendirikan dan mengelola komunitas yang berfokus pada gerakan literasi, diskusi keilmuan, dan peningkatan minat baca masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="py-24 bg-black border-t border-gray-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Riwayat Pendidikan</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative pl-8 sm:pl-32 py-6 group scroll-animate">
+                    <div class="hidden sm:block absolute left-0 top-8 text-gray-400 font-bold text-sm">2023 - Skrg</div>
+                    <div class="absolute left-0 sm:left-24 top-8 w-4 h-4 bg-black border-2 border-green-500 rounded-full z-10 group-hover:bg-green-500 transition duration-300"></div>
+                    <div class="absolute left-1.5 sm:left-[103px] top-12 bottom-[-1.5rem] w-px bg-gray-800 group-hover:bg-gray-700 transition duration-300"></div>
+                    <div class="bg-[#0a0a0a] p-6 rounded-2xl border border-gray-800 transition duration-300 transform group-hover:-translate-y-1 glow-green">
+                        <span class="sm:hidden inline-block px-3 py-1 bg-black border border-green-900/50 text-green-400 text-xs font-bold tracking-wide rounded-full mb-3">2023 - Sekarang</span>
+                        <h3 class="text-xl font-bold text-white mb-1">Perpustakaan & Sains Informasi</h3>
+                        <h4 class="text-green-500 text-sm font-medium mb-3">UIN Maulana Malik Ibrahim Malang</h4>
+                        <p class="text-gray-500 text-sm">Mahasiswa aktif. Menggali persimpangan antara manajemen informasi perpustakaan, data besar, dan rekayasa perangkat lunak.</p>
+                    </div>
+                </div>
+                <div class="relative pl-8 sm:pl-32 py-6 group scroll-animate">
+                    <div class="hidden sm:block absolute left-0 top-8 text-gray-400 font-bold text-sm">2020 - 2023</div>
+                    <div class="absolute left-0 sm:left-24 top-8 w-4 h-4 bg-black border-2 border-blue-500 rounded-full z-10 group-hover:bg-blue-500 transition duration-300"></div>
+                    <div class="absolute left-1.5 sm:left-[103px] top-12 bottom-[-1.5rem] w-px bg-gray-800 transition duration-300"></div>
+                    <div class="bg-[#0a0a0a] p-6 rounded-2xl border border-gray-800 transition duration-300 transform group-hover:-translate-y-1 glow-blue">
+                        <span class="sm:hidden inline-block px-3 py-1 bg-black border border-blue-900/50 text-blue-400 text-xs font-bold tracking-wide rounded-full mb-3">2020 - 2023</span>
+                        <h3 class="text-xl font-bold text-white mb-1">Sekolah Menengah Atas</h3>
+                        <h4 class="text-blue-500 text-sm font-medium mb-3">SMAN 4 Praya</h4>
+                        <p class="text-gray-500 text-sm">Menyelesaikan pendidikan menengah dengan fondasi pengetahuan ilmu alam dan teknologi.</p>
+                    </div>
+                </div>
+                <div class="relative pl-8 sm:pl-32 py-6 group scroll-animate">
+                    <div class="hidden sm:block absolute left-0 top-8 text-gray-400 font-bold text-sm">2017 - 2020</div>
+                    <div class="absolute left-0 sm:left-24 top-8 w-4 h-4 bg-black border-2 border-yellow-500 rounded-full z-10 group-hover:bg-yellow-500 transition duration-300"></div>
+                    <div class="absolute left-1.5 sm:left-[103px] top-12 bottom-[-1.5rem] w-px bg-gray-800 transition duration-300"></div>
+                    <div class="bg-[#0a0a0a] p-6 rounded-2xl border border-gray-800 transition duration-300 transform group-hover:-translate-y-1 glow-yellow">
+                        <span class="sm:hidden inline-block px-3 py-1 bg-black border border-yellow-900/50 text-yellow-400 text-xs font-bold tracking-wide rounded-full mb-3">2017 - 2020</span>
+                        <h3 class="text-xl font-bold text-white mb-1">Pendidikan Menengah Pertama</h3>
+                        <h4 class="text-yellow-500 text-sm font-medium mb-3">MTsN 1 Lombok Tengah</h4>
+                        <p class="text-gray-500 text-sm">Pendidikan berlandaskan agama dan ilmu pengetahuan umum di jenjang tsanawiyah.</p>
+                    </div>
+                </div>
+                <div class="relative pl-8 sm:pl-32 py-6 group scroll-animate">
+                    <div class="hidden sm:block absolute left-0 top-8 text-gray-400 font-bold text-sm">2011 - 2017</div>
+                    <div class="absolute left-0 sm:left-24 top-8 w-4 h-4 bg-black border-2 border-red-500 rounded-full z-10 group-hover:bg-red-500 transition duration-300"></div>
+                    <div class="absolute left-1.5 sm:left-[103px] top-12 bottom-0 w-px bg-gray-800 transition duration-300"></div>
+                    <div class="bg-[#0a0a0a] p-6 rounded-2xl border border-gray-800 transition duration-300 transform group-hover:-translate-y-1 glow-red">
+                        <span class="sm:hidden inline-block px-3 py-1 bg-black border border-red-900/50 text-red-400 text-xs font-bold tracking-wide rounded-full mb-3">2011 - 2017</span>
+                        <h3 class="text-xl font-bold text-white mb-1">Sekolah Dasar</h3>
+                        <h4 class="text-red-500 text-sm font-medium mb-3">SDN 2 Mangkung</h4>
+                        <p class="text-gray-500 text-sm">Meletakkan dasar-dasar pendidikan awal dan pembentukan karakter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sertifikat & Penghargaan -->
+    <section id="sertifikat" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Sertifikat & Penghargaan</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cert 1 -->
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-green group text-center flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 border border-gray-800 group-hover:border-green-500 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-certificate text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AWS Cloud Practitioner</h3>
+                    <p class="text-green-500 font-medium text-sm mb-4">Coursera • 2023</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Sertifikasi komputasi awan menggunakan infrastruktur Amazon Web Services.</p>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-yellow group text-center flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 border border-gray-800 group-hover:border-yellow-500 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-award text-3xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Juara 1 Web Design</h3>
+                    <p class="text-yellow-500 font-medium text-sm mb-4">TechFest Nasional • 2022</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Meraih juara pertama dalam kompetisi desain antarmuka dan UX tingkat nasional.</p>
+                </div>
+                <!-- Cert 3 -->
+                <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-red group text-center flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 border border-gray-800 group-hover:border-red-500 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-medal text-3xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Frontend Developer</h3>
+                    <p class="text-red-500 font-medium text-sm mb-4">Dicoding • 2021</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Kelulusan program sertifikasi pengembang web frontend dasar hingga menengah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Portofolio -->
+    <section id="proyek" class="py-24 bg-black border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Karya Unggulan</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col gap-24 md:gap-32 mt-12">
+                <!-- Proyek 1 (Normal / Kiri) -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-red-500/20 blur-[100px] rounded-full group-hover:bg-red-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Web Desa Wisata" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-red-500 transition duration-500">
+                            <i class="fas fa-map-marked-alt text-3xl text-red-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left">
+                        <p class="text-red-500 font-mono text-sm tracking-widest mb-3 uppercase">Web System</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-red-500 transition duration-300 leading-tight">Web Desa Wisata Dewi Sri</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Membuat platform web untuk Desa Wisata Dewi Sri (Desa Sidorejo) sebagai medium promosi wisata, pelestarian budaya, dan informasi kegiatan.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-red-900/50 group-hover:text-red-400 transition">Laravel</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-yellow-900/50 group-hover:text-yellow-400 transition">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 (Reversed / Kanan) -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full group-hover:bg-blue-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="E-Praktikum SQL" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-blue-500 transition duration-500">
+                            <i class="fas fa-database text-3xl text-blue-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left md:text-right">
+                        <p class="text-blue-500 font-mono text-sm tracking-widest mb-3 uppercase">Web Learning</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-blue-500 transition duration-300 leading-tight">E-Praktikum SQL Learning</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Membangun sistem e-learning interaktif berbasis web untuk memudahkan mahasiswa belajar dan menjalankan kueri SQL basis data secara langsung.</p>
+                        <div class="flex flex-wrap justify-start md:justify-end gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">Web</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 3 (Normal / Kiri) -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-green-500/20 blur-[100px] rounded-full group-hover:bg-green-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80" alt="Orbit List" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-green-500 transition duration-500">
+                            <i class="fas fa-tasks text-3xl text-green-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left">
+                        <p class="text-green-500 font-mono text-sm tracking-widest mb-3 uppercase">Mobile App</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-green-500 transition duration-300 leading-tight">Manajemen Tugas Orbit List</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Mengembangkan aplikasi manajemen waktu dan pencatatan tugas harian untuk memudahkan pengguna dalam mengatur produktivitas sehari-hari.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Kotlin</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-gray-700/50 group-hover:text-white transition">App Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 4 (Reversed / Kanan) -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full group-hover:bg-yellow-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Getter Pendakian" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-yellow-500 transition duration-500">
+                            <i class="fas fa-mountain text-3xl text-yellow-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left md:text-right">
+                        <p class="text-yellow-500 font-mono text-sm tracking-widest mb-3 uppercase">Web System</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-yellow-500 transition duration-300 leading-tight">Getter Booking Pendakian</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Sistem reservasi dan booking rute pendakian berbasis web untuk mempermudah pendaftaran pendaki secara terpusat.</p>
+                        <div class="flex flex-wrap justify-start md:justify-end gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-yellow-900/50 group-hover:text-yellow-400 transition">JavaScript</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 5 (Normal / Kiri) -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-gray-500/20 blur-[100px] rounded-full group-hover:bg-gray-400/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&w=800&q=80" alt="Sistem OCR Dokumen" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-gray-300 transition duration-500">
+                            <i class="fas fa-file-alt text-3xl text-gray-300 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left">
+                        <p class="text-gray-400 font-mono text-sm tracking-widest mb-3 uppercase">AI & Data Science</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-gray-300 transition duration-300 leading-tight">Sistem OCR Dokumen (PDF & IMG)</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Merancang dan membangun Sistem Optical Character Recognition (OCR) otomatis yang mampu mendeteksi dan mengekstraksi teks dari berbagai format dokumen seperti PDF maupun gambar (JPG, PNG, JPEG) menjadi teks digital dengan tingkat akurasi tinggi.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">Python</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Data Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 6 (Reversed / Kanan) -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-cyan-500/20 blur-[100px] rounded-full group-hover:bg-cyan-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Sistem Manajemen Perpustakaan" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-cyan-500 transition duration-500">
+                            <i class="fas fa-book text-3xl text-cyan-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left md:text-right">
+                        <p class="text-cyan-500 font-mono text-sm tracking-widest mb-3 uppercase">Information System</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-cyan-500 transition duration-300 leading-tight">Sistem Manajemen Perpustakaan</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Membangun sistem informasi terpadu untuk mengelola sirkulasi peminjaman buku, manajemen data anggota, dan inventaris koleksi perpustakaan secara digital dan efisien.</p>
+                        <div class="flex flex-wrap justify-start md:justify-end gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-cyan-900/50 group-hover:text-cyan-400 transition">PHP Native</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Web System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aktivitas GitHub -->
+    <section id="github" class="py-24 bg-[#050505] border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Aktivitas GitHub</h2>
+                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400 font-mono text-sm tracking-widest">USER: <span id="gh-username-display" class="text-white font-bold">...</span></p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-10">
+                <!-- Profile Card -->
+                <div class="lg:w-1/3 bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 text-center scroll-animate glow-white flex flex-col justify-center items-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-br from-gray-800 to-black z-0"></div>
+                    <img id="gh-avatar" src="" alt="GitHub Avatar" class="w-32 h-32 rounded-full mb-6 border-4 border-[#0a0a0a] z-10 relative hidden shadow-lg">
+                    <div id="gh-avatar-placeholder" class="w-32 h-32 rounded-full mb-6 border-4 border-gray-800 bg-gray-900 animate-pulse z-10 relative"></div>
+
+                    <h3 id="gh-name" class="text-2xl font-bold text-white mb-2 z-10 relative">Memuat...</h3>
+                    <p id="gh-bio" class="text-gray-400 text-sm mb-6 max-w-xs z-10 relative"></p>
+
+                    <div class="flex justify-center gap-6 text-sm text-gray-400 mb-8 w-full border-t border-b border-gray-800 py-4 z-10 relative">
+                        <div><span id="gh-repos" class="block text-2xl font-bold text-white">0</span> Repos</div>
+                        <div><span id="gh-followers" class="block text-2xl font-bold text-white">0</span> Followers</div>
+                    </div>
+                    <a id="gh-link" href="#" target="_blank" class="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition transform hover:-translate-y-1 z-10 relative shadow-[0_0_15px_rgba(255,255,255,0.3)]">Kunjungi Profil</a>
+                </div>
+
+                <!-- Recent Repositories -->
+                <div class="lg:w-2/3 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-white mb-6 scroll-animate"><i class="fas fa-code-branch mr-3 text-gray-500"></i>Repositori Terbaru</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="gh-repos-container">
+                        <!-- Skeleton Loader -->
+                        <div class="bg-[#0a0a0a] rounded-2xl p-6 border border-gray-800 animate-pulse">
+                            <div class="h-6 bg-gray-900 rounded w-1/2 mb-4"></div>
+                            <div class="h-4 bg-gray-900 rounded w-full mb-2"></div>
+                            <div class="h-4 bg-gray-900 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Stats Banner Dinamis -->
+            <div class="mt-12 text-center scroll-animate flex justify-center overflow-x-auto min-h-[200px]">
+                <img id="gh-stats-img" src="" alt="GitHub Stats" class="border border-gray-800 rounded-2xl glow-blue hidden opacity-80 hover:opacity-100 transition duration-300 max-w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-32 bg-[#050505] border-t border-gray-900 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 scroll-animate">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8">Mari Berkolaborasi.</h2>
+            <p class="text-gray-400 text-lg mb-12 leading-relaxed">Saya selalu terbuka untuk mendiskusikan pekerjaan pengembangan produk, peluang kemitraan, atau sekadar bertukar pikiran.</p>
+            <a href="https://wa.me/6285339365895" target="_blank" class="inline-flex items-center gap-3 px-10 py-5 bg-[#25D366] text-white font-extrabold rounded-full hover:bg-green-500 transition transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.3)]">
+                <i class="fab fa-whatsapp text-white text-xl"></i> Hubungi via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- File JS Eksternal -->
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <a href="#beranda" class="font-bold text-2xl tracking-tighter text-white hover:text-gray-300 transition">
+                    Dev<span class="text-blue-500">.</span>Portfolio
+                </a>
+                <p class="text-gray-500 text-sm mt-2">Membangun masa depan digital, satu baris kode setiap kalinya.</p>
+            </div>
+            <div class="flex space-x-6 justify-center">
+                <a href="https://github.com/serverheru" target="_blank" class="text-gray-500 hover:text-white transition transform hover:scale-110 text-xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lalu-hairul-umam-074756281/" target="_blank" class="text-gray-500 hover:text-blue-500 transition transform hover:scale-110 text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/serverheru/" target="_blank" class="text-gray-500 hover:text-pink-500 transition transform hover:scale-110 text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@chaerul45" target="_blank" class="text-gray-500 hover:text-red-500 transition transform hover:scale-110 text-xl"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="text-center text-gray-600 text-xs mt-10">
+            &copy; 2023 Dev.Portfolio. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

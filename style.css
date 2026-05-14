@@ -1,0 +1,38 @@
+/* Custom styles untuk efek interaktif & animasi */
+
+/* Efek Kursor Mengetik */
+.typing-cursor {
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    from, to { color: transparent; }
+    50% { color: #ffffff; }
+}
+
+/* Animasi Scroll Fade-In */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi Mengambang untuk Foto Profil */
+.float-animate {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Glow Effects (Bercahaya) untuk Cards - Menggunakan Merah, Kuning, Hijau, Biru */
+.glow-red:hover { box-shadow: 0 0 25px rgba(239, 68, 68, 0.4); border-color: #ef4444; }
+.glow-yellow:hover { box-shadow: 0 0 25px rgba(234, 179, 8, 0.4); border-color: #eab308; }
+.glow-green:hover { box-shadow: 0 0 25px rgba(34, 197, 94, 0.4); border-color: #22c55e; }
+.glow-blue:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); border-color: #3b82f6; }
+.glow-white:hover { box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); }
