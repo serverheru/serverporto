@@ -300,9 +300,18 @@
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
                     <div class="w-full md:w-1/2 relative">
                         <div class="absolute inset-0 bg-red-500/20 blur-[100px] rounded-full group-hover:bg-red-500/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Web Desa Wisata" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="image/1.png" alt="Web Desa Wisata" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
                         </div>
                         <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-red-500 transition duration-500">
                             <i class="fas fa-map-marked-alt text-3xl text-red-500 transform group-hover:scale-110 transition duration-500"></i>
@@ -320,12 +329,21 @@
                 </div>
 
                 <!-- Proyek 2 (Reversed / Kanan) -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-right">
                     <div class="w-full md:w-1/2 relative">
                         <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full group-hover:bg-blue-500/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="E-Praktikum SQL" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="image/2.png" alt="E-Praktikum SQL" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
                         </div>
                         <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-blue-500 transition duration-500">
                             <i class="fas fa-database text-3xl text-blue-500 transform group-hover:scale-110 transition duration-500"></i>
@@ -342,82 +360,54 @@
                     </div>
                 </div>
 
-                <!-- Proyek 3 (Normal / Kiri) -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
+                <!-- Proyek 3 (Normal / Kiri) - SISTEM PENJADWALAN SANTRI -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-left">
                     <div class="w-full md:w-1/2 relative">
-                        <div class="absolute inset-0 bg-green-500/20 blur-[100px] rounded-full group-hover:bg-green-500/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80" alt="Orbit List" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-purple-500/20 blur-[100px] rounded-full group-hover:bg-purple-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="image/3.png" alt="Sistem Penjadwalan Santri" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-green-500 transition duration-500">
-                            <i class="fas fa-tasks text-3xl text-green-500 transform group-hover:scale-110 transition duration-500"></i>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-purple-500 transition duration-500">
+                            <i class="fas fa-calendar-alt text-3xl text-purple-500 transform group-hover:scale-110 transition duration-500"></i>
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 z-10 text-left">
-                        <p class="text-green-500 font-mono text-sm tracking-widest mb-3 uppercase">Mobile App</p>
-                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-green-500 transition duration-300 leading-tight">Manajemen Tugas Orbit List</h3>
-                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Mengembangkan aplikasi manajemen waktu dan pencatatan tugas harian untuk memudahkan pengguna dalam mengatur produktivitas sehari-hari.</p>
+                        <p class="text-purple-500 font-mono text-sm tracking-widest mb-3 uppercase">Information System</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-purple-500 transition duration-300 leading-tight">Sistem Penjadwalan Santri</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Membangun sistem informasi penjadwalan akademik dan kegiatan santri untuk mempermudah manajemen waktu dan alokasi ruang di lingkungan pesantren.</p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Kotlin</span>
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-gray-700/50 group-hover:text-white transition">App Dev</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-purple-900/50 group-hover:text-purple-400 transition">Web System</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">PHP</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Proyek 4 (Reversed / Kanan) -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
-                    <div class="w-full md:w-1/2 relative">
-                        <div class="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full group-hover:bg-yellow-500/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Getter Pendakian" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
-                        </div>
-                        <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-yellow-500 transition duration-500">
-                            <i class="fas fa-mountain text-3xl text-yellow-500 transform group-hover:scale-110 transition duration-500"></i>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 z-10 text-left md:text-right">
-                        <p class="text-yellow-500 font-mono text-sm tracking-widest mb-3 uppercase">Web System</p>
-                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-yellow-500 transition duration-300 leading-tight">Getter Booking Pendakian</h3>
-                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Sistem reservasi dan booking rute pendakian berbasis web untuk mempermudah pendaftaran pendaki secara terpusat.</p>
-                        <div class="flex flex-wrap justify-start md:justify-end gap-3">
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-yellow-900/50 group-hover:text-yellow-400 transition">JavaScript</span>
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">PHP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek 5 (Normal / Kiri) -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate">
-                    <div class="w-full md:w-1/2 relative">
-                        <div class="absolute inset-0 bg-gray-500/20 blur-[100px] rounded-full group-hover:bg-gray-400/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&w=800&q=80" alt="Sistem OCR Dokumen" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
-                        </div>
-                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-gray-300 transition duration-500">
-                            <i class="fas fa-file-alt text-3xl text-gray-300 transform group-hover:scale-110 transition duration-500"></i>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 z-10 text-left">
-                        <p class="text-gray-400 font-mono text-sm tracking-widest mb-3 uppercase">AI & Data Science</p>
-                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-gray-300 transition duration-300 leading-tight">Sistem OCR Dokumen (PDF & IMG)</h3>
-                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Merancang dan membangun Sistem Optical Character Recognition (OCR) otomatis yang mampu mendeteksi dan mengekstraksi teks dari berbagai format dokumen seperti PDF maupun gambar (JPG, PNG, JPEG) menjadi teks digital dengan tingkat akurasi tinggi.</p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">Python</span>
-                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Data Science</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek 6 (Reversed / Kanan) -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate">
+                <!-- Proyek 4 (Reversed / Kanan) - MANAJEMEN PERPUS -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-right">
                     <div class="w-full md:w-1/2 relative">
                         <div class="absolute inset-0 bg-cyan-500/20 blur-[100px] rounded-full group-hover:bg-cyan-500/30 transition duration-500 z-0"></div>
-                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Sistem Manajemen Perpustakaan" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="image/4.png" alt="Sistem Manajemen Perpustakaan" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
                         </div>
                         <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-cyan-500 transition duration-500">
                             <i class="fas fa-book text-3xl text-cyan-500 transform group-hover:scale-110 transition duration-500"></i>
@@ -430,6 +420,102 @@
                         <div class="flex flex-wrap justify-start md:justify-end gap-3">
                             <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-cyan-900/50 group-hover:text-cyan-400 transition">PHP Native</span>
                             <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Web System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 5 (Normal / Kiri) - GETTER PENDAKIAN -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-left">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full group-hover:bg-yellow-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="image/5.png" alt="Getter Pendakian" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-yellow-500 transition duration-500">
+                            <i class="fas fa-mountain text-3xl text-yellow-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left">
+                        <p class="text-yellow-500 font-mono text-sm tracking-widest mb-3 uppercase">Web System</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-yellow-500 transition duration-300 leading-tight">Getter Booking Pendakian</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Sistem reservasi dan booking rute pendakian berbasis web untuk mempermudah pendaftaran pendaki secara terpusat.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-yellow-900/50 group-hover:text-yellow-400 transition">JavaScript</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 6 (Reversed / Kanan) - ORBIT LIST (UNSPLASH) -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-right">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-green-500/20 blur-[100px] rounded-full group-hover:bg-green-500/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80" alt="Orbit List" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 left-6 md:top-1/2 md:-left-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-green-500 transition duration-500">
+                            <i class="fas fa-tasks text-3xl text-green-500 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left md:text-right">
+                        <p class="text-green-500 font-mono text-sm tracking-widest mb-3 uppercase">Mobile App</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-green-500 transition duration-300 leading-tight">Manajemen Tugas Orbit List</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Mengembangkan aplikasi manajemen waktu dan pencatatan tugas harian untuk memudahkan pengguna dalam mengatur produktivitas sehari-hari.</p>
+                        <div class="flex flex-wrap justify-start md:justify-end gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Kotlin</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-gray-700/50 group-hover:text-white transition">App Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 7 (Normal / Kiri) - OCR (UNSPLASH) -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group scroll-animate" data-anim="fade-left">
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="absolute inset-0 bg-gray-500/20 blur-[100px] rounded-full group-hover:bg-gray-400/30 transition duration-500 z-0"></div>
+                        <div class="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden border border-gray-800 transform group-hover:-translate-y-2 transition duration-500 z-10 shadow-2xl bg-[#0a0a0a] flex flex-col">
+                            <!-- Mockup Browser Mac -->
+                            <div class="h-10 bg-[#151515] border-b border-gray-800 flex items-center px-5 gap-2.5 w-full shrink-0 z-20 relative">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] shadow-[0_0_8px_rgba(255,95,86,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-[0_0_8px_rgba(255,189,46,0.3)]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] shadow-[0_0_8px_rgba(39,201,63,0.3)]"></div>
+                                <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
+                            </div>
+                            <div class="relative flex-1 w-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Sistem OCR Dokumen" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 right-6 md:top-1/2 md:-right-8 md:-translate-y-1/2 w-20 h-20 bg-[#0a0a0a] border border-gray-700 rounded-2xl flex items-center justify-center z-20 shadow-[0_0_30px_rgba(0,0,0,0.8)] group-hover:border-gray-300 transition duration-500">
+                            <i class="fas fa-file-alt text-3xl text-gray-300 transform group-hover:scale-110 transition duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 z-10 text-left">
+                        <p class="text-gray-400 font-mono text-sm tracking-widest mb-3 uppercase">AI & Data Science</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-white mb-5 group-hover:text-gray-300 transition duration-300 leading-tight">Sistem OCR Dokumen (PDF & IMG)</h3>
+                        <p class="text-gray-400 mb-8 text-base lg:text-lg leading-relaxed">Merancang dan membangun Sistem Optical Character Recognition (OCR) otomatis yang mampu mendeteksi dan mengekstraksi teks dari berbagai format dokumen seperti PDF maupun gambar (JPG, PNG, JPEG) menjadi teks digital dengan tingkat akurasi tinggi.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-blue-900/50 group-hover:text-blue-400 transition">Python</span>
+                            <span class="px-5 py-2 bg-[#0a0a0a] border border-gray-800 text-gray-300 text-sm font-bold tracking-wide rounded-full group-hover:border-green-900/50 group-hover:text-green-400 transition">Data Science</span>
                         </div>
                     </div>
                 </div>

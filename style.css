@@ -215,6 +215,9 @@
 .glow-green:hover { box-shadow: 0 0 30px rgba(34, 197, 94, 0.4), 0 0 60px rgba(34, 197, 94, 0.1); border-color: #22c55e; }
 .glow-blue:hover { box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.1); border-color: #3b82f6; }
 .glow-white:hover { box-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.08); }
+.glow-cyan:hover { box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.1); border-color: #06b6d4; }
+.glow-purple:hover { box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 0 60px rgba(168, 85, 247, 0.1); border-color: #a855f7; }
+.glow-orange:hover { box-shadow: 0 0 30px rgba(249, 115, 22, 0.4), 0 0 60px rgba(249, 115, 22, 0.1); border-color: #f97316; }
 
 /* === 3D Tilt Container === */
 .tilt-card {

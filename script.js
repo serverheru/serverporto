@@ -396,12 +396,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const githubUsername = 'serverheru';
 
     const ghUsernameDisplay = document.getElementById('gh-username-display');
-    const ghAvatar = document.getElementById('gh-avatar');
-    const ghAvatarPlaceholder = document.getElementById('gh-avatar-placeholder');
     const ghName = document.getElementById('gh-name');
     const ghBio = document.getElementById('gh-bio');
     const ghReposCount = document.getElementById('gh-repos');
-    const ghFollowers = document.getElementById('gh-followers');
     const ghLink = document.getElementById('gh-link');
     const ghReposContainer = document.getElementById('gh-repos-container');
     const ghStatsImg = document.getElementById('gh-stats-img');
@@ -466,20 +463,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fetch Data Profil GitHub
         fetchGitHubWithCache(`https://api.github.com/users/${githubUsername}`, `gh_profile_${githubUsername}`)
             .then(data => {
-                ghAvatar.src = data.avatar_url;
-                ghAvatar.classList.remove('hidden');
-                ghAvatarPlaceholder.classList.add('hidden');
                 
                 ghName.textContent = data.name || data.login;
                 ghBio.textContent = data.bio || 'Tidak ada bio yang tersedia.';
                 
                 // Animate counters
                 if (window.animateCounter) {
-                    animateCounter(ghReposCount, data.public_repos || 0);
-                    animateCounter(ghFollowers, data.followers || 0);
+                    animateCounter(ghReposCount, data.public_repos || 0, 2500); // 2.5 detik untuk animasi kalkulasi
                 } else {
                     ghReposCount.textContent = data.public_repos || 0;
-                    ghFollowers.textContent = data.followers || 0;
                 }
                 
                 ghLink.href = data.html_url;
