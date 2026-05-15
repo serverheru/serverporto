@@ -341,7 +341,7 @@
                                 <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
                             </div>
                             <div class="relative flex-1 w-full overflow-hidden">
-                                <img src="image/2.png" alt="E-Praktikum SQL" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
+                                <img src="./image/e-praktikum-sql.png" alt="E-Praktikum SQL" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
                             </div>
                         </div>
