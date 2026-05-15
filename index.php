@@ -37,24 +37,26 @@
                     <a href="#kontak" class="text-gray-400 hover:text-blue-500 transition font-medium">Kontak</a>
                 </div>
                 <!-- Tombol Menu HP -->
-                <div class="xl:hidden">
-                    <button id="hamburger-btn" class="text-gray-400 hover:text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                <div class="xl:hidden flex items-center">
+                    <button id="hamburger-btn" class="p-2 bg-gray-900/80 border border-gray-700 rounded-xl text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                        <i class="fas fa-bars text-xl w-6 h-6 flex items-center justify-center"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Menu Dropdown HP -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-black/95 border-b border-gray-900 absolute w-full max-h-[80vh] overflow-y-auto">
-            <a href="#beranda" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-red-500 transition border-b border-gray-900/50">Beranda</a>
-            <a href="#tentang" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-yellow-500 transition border-b border-gray-900/50">Tentang</a>
-            <a href="#layanan" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-green-500 transition border-b border-gray-900/50">Layanan</a>
-            <a href="#pengalaman" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition border-b border-gray-900/50">Pengalaman</a>
-            <a href="#pendidikan" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-yellow-500 transition border-b border-gray-900/50">Pendidikan</a>
-            <a href="#sertifikat" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition border-b border-gray-900/50">Sertifikat</a>
-            <a href="#proyek" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-green-500 transition border-b border-gray-900/50">Proyek</a>
-            <a href="#github" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-white transition border-b border-gray-900/50">GitHub</a>
-            <a href="#kontak" class="block py-4 px-6 text-sm text-gray-400 hover:bg-gray-900 hover:text-blue-500 transition">Kontak</a>
+        <div id="mobile-menu" class="hidden xl:hidden bg-black/95 backdrop-blur-xl border-b border-gray-800 absolute w-full left-0 top-full max-h-[85vh] overflow-y-auto shadow-2xl transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#beranda" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-red-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-home w-6 text-center mr-2 text-gray-500"></i>Beranda</a>
+                <a href="#tentang" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-yellow-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-user w-6 text-center mr-2 text-gray-500"></i>Tentang</a>
+                <a href="#layanan" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-green-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-concierge-bell w-6 text-center mr-2 text-gray-500"></i>Layanan</a>
+                <a href="#pengalaman" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-blue-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-briefcase w-6 text-center mr-2 text-gray-500"></i>Pengalaman</a>
+                <a href="#pendidikan" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-yellow-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-graduation-cap w-6 text-center mr-2 text-gray-500"></i>Pendidikan</a>
+                <a href="#sertifikat" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-blue-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-certificate w-6 text-center mr-2 text-gray-500"></i>Sertifikat</a>
+                <a href="#proyek" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-green-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-project-diagram w-6 text-center mr-2 text-gray-500"></i>Proyek</a>
+                <a href="#github" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-white hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fab fa-github w-6 text-center mr-2 text-gray-500"></i>GitHub</a>
+                <a href="#kontak" class="block py-3 px-4 rounded-xl text-base font-medium text-gray-300 hover:bg-gray-900 hover:text-blue-500 hover:pl-6 transition-all border border-transparent hover:border-gray-800"><i class="fas fa-envelope w-6 text-center mr-2 text-gray-500"></i>Kontak</a>
+            </div>
         </div>
     </nav>
 
