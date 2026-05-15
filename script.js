@@ -1,3 +1,20 @@
+// ==========================================
+// Preloader (Hide after full page load)
+// ==========================================
+function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader && !preloader.classList.contains('loaded')) {
+        preloader.classList.add('loaded');
+        // Hapus elemen dari HTML setelah animasi memudar selesai agar tidak membebani memori
+        setTimeout(() => preloader.remove(), 600); 
+    }
+}
+
+window.addEventListener('load', hidePreloader);
+
+// Fallback: paksa hilangkan preloader setelah 5 detik jika koneksi lambat
+setTimeout(hidePreloader, 5000);
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // ==========================================
@@ -427,12 +444,27 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         }
 
+        // Fungsi bantuan untuk Fetch dengan Cache LocalStorage (Mencegah Rate Limit)
+        async function fetchGitHubWithCache(url, cacheKey) {
+            const cachedData = localStorage.getItem(cacheKey);
+            const cachedTime = localStorage.getItem(cacheKey + '_time');
+            
+            // Gunakan cache jika data tersedia dan usianya di bawah 1 jam (3600000 milidetik)
+            if (cachedData && cachedTime && (Date.now() - cachedTime < 3600000)) {
+                return JSON.parse(cachedData);
+            }
+            
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Limit API GitHub tercapai');
+            
+            const data = await response.json();
+            localStorage.setItem(cacheKey, JSON.stringify(data));
+            localStorage.setItem(cacheKey + '_time', Date.now());
+            return data;
+        }
+
         // Fetch Data Profil GitHub
-        fetch(`https://api.github.com/users/${githubUsername}`)
-            .then(response => {
-                if (!response.ok) throw new Error('Limit API GitHub tercapai');
-                return response.json();
-            })
+        fetchGitHubWithCache(`https://api.github.com/users/${githubUsername}`, `gh_profile_${githubUsername}`)
             .then(data => {
                 ghAvatar.src = data.avatar_url;
                 ghAvatar.classList.remove('hidden');
@@ -455,11 +487,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error memuat profil GitHub:', error));
 
         // Fetch Repositori Terbaru (Maksimal 3)
-        fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`)
-            .then(response => {
-                if (!response.ok) throw new Error('Limit API GitHub tercapai');
-                return response.json();
-            })
+        fetchGitHubWithCache(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`, `gh_repos_${githubUsername}`)
             .then(repos => {
                 if (!Array.isArray(repos)) throw new Error('Data repositori tidak valid');
                 ghReposContainer.innerHTML = '';
