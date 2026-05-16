@@ -481,4 +481,37 @@ nav a.nav-active {
     .hero-stat { padding: 0.5rem 0.8rem; min-width: 60px; }
     .hero-stat-num { font-size: 1.2rem; }
     #back-to-top { bottom: 1.25rem; right: 1.25rem; width: 42px; height: 42px; }
+
+    /* Section header margin smaller on mobile */
+    .text-center.mb-20 { margin-bottom: 3rem; }
+
+    /* Project images shorter on mobile */
+    .h-\[300px\] { height: 220px; }
+
+    /* Contact h2 smaller on mobile */
+    section#kontak h2 { font-size: 2rem; }
+
+    /* Contact form padding reduce on mobile */
+    section#kontak .grid { gap: 1.5rem; }
+
+    /* Slider cards full width minus padding on mobile */
+    .slider-container .shrink-0 { scroll-snap-align: center; }
+
+    /* Touch action for sliders */
+    .slider-container { touch-action: pan-x; }
+
+    /* Section title underline centered */
+    .section-title::after { left: 50%; transform: translateX(-50%); }
+
+    /* Profile ring smaller on mobile */
+    .profile-ring { inset: -5px; }
+    .profile-ring-mask { inset: 2px; }
+}
+
+/* === Extra small phones (< 380px) === */
+@media (max-width: 380px) {
+    .hero-stat { padding: 0.4rem 0.6rem; min-width: 52px; }
+    .hero-stat-num { font-size: 1rem; }
+    .hero-stat-label { font-size: 0.55rem; }
+    .section-badge { font-size: 0.65rem; padding: 0.25rem 0.7rem; }
 }
