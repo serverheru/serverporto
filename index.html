@@ -201,34 +201,71 @@
                 </div>
             </div>
 
-            <!-- Floating Tech Badges — tampil semua ukuran, lebih kecil di mobile -->
-            <div class="flex absolute top-4 -left-4 md:-left-8 w-8 h-8 md:w-16 md:h-16 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.2)] z-30 float-animate"
+
+            <!-- =====================================================
+                 DESKTOP Badges (hidden di mobile, muncul di md+)
+                 Posisi & ukuran identik dengan desain awal
+                 ===================================================== -->
+            <div class="hidden md:flex absolute top-4 -left-8 w-16 h-16 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.2)] z-30 float-animate"
                 style="animation-delay: 0.2s; animation-duration: 4s;">
-                <i class="fab fa-laravel text-red-500 text-sm md:text-3xl"></i>
+                <i class="fab fa-laravel text-red-500 text-3xl"></i>
             </div>
-            <div class="flex absolute top-1/4 -right-4 md:-right-8 w-8 h-8 md:w-14 md:h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(234,179,8,0.2)] z-30 float-animate"
+            <div class="hidden md:flex absolute top-1/4 -right-8 w-14 h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(234,179,8,0.2)] z-30 float-animate"
                 style="animation-delay: 1.5s; animation-duration: 5s;">
-                <i class="fab fa-js-square text-yellow-500 text-sm md:text-2xl"></i>
+                <i class="fab fa-js-square text-yellow-500 text-2xl"></i>
             </div>
-            <div class="flex absolute bottom-1/4 -left-4 md:-left-10 w-8 h-8 md:w-16 md:h-16 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.2)] z-30 float-animate"
+            <div class="hidden md:flex absolute bottom-1/4 -left-10 w-16 h-16 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.2)] z-30 float-animate"
                 style="animation-delay: 0.8s; animation-duration: 4.5s;">
-                <i class="fab fa-python text-blue-500 text-sm md:text-3xl"></i>
+                <i class="fab fa-python text-blue-500 text-3xl"></i>
             </div>
-            <div class="flex absolute -bottom-3 right-2 md:-bottom-4 md:right-0 w-8 h-8 md:w-14 md:h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(168,85,247,0.2)] z-30 float-animate"
+            <div class="hidden md:flex absolute -bottom-4 right-0 w-14 h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(168,85,247,0.2)] z-30 float-animate"
                 style="animation-delay: 2s; animation-duration: 6s;">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 md:w-7 md:h-7 text-purple-500">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-purple-500">
                     <path d="M24 24H0V0h24L12 12Z" />
                 </svg>
             </div>
-            <div class="flex absolute -top-3 right-1/3 md:-top-6 md:right-1/3 w-8 h-8 md:w-14 md:h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.2)] z-30 float-animate"
+            <div class="hidden md:flex absolute -top-6 right-1/3 w-14 h-14 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.2)] z-30 float-animate"
                 style="animation-delay: 3s; animation-duration: 5.5s;">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 md:w-6 md:h-6 text-cyan-400">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-cyan-400">
                     <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l3.67 3.719L21.684 24h7.357l-9.686-9.686z" />
                 </svg>
             </div>
-            <div class="flex absolute -bottom-1 left-1/3 w-8 h-8 md:w-12 md:h-12 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)] z-30 float-animate"
+            <div class="hidden md:flex absolute -bottom-2 left-1/3 w-12 h-12 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)] z-30 float-animate"
                 style="animation-delay: 1.2s; animation-duration: 5s;">
-                <i class="fas fa-database text-orange-500 text-sm md:text-xl"></i>
+                <i class="fas fa-database text-orange-500 text-xl"></i>
+            </div>
+
+            <!-- =====================================================
+                 MOBILE Badges (muncul di mobile, hidden di md+)
+                 Ukuran 32px, offset kecil agar tidak overflow layar
+                 ===================================================== -->
+            <div class="flex md:hidden absolute top-3 -left-3 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(239,68,68,0.3)] z-30 float-animate"
+                style="animation-delay: 0.2s; animation-duration: 4s;">
+                <i class="fab fa-laravel text-red-500 text-sm"></i>
+            </div>
+            <div class="flex md:hidden absolute top-1/4 -right-3 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(234,179,8,0.3)] z-30 float-animate"
+                style="animation-delay: 1.5s; animation-duration: 5s;">
+                <i class="fab fa-js-square text-yellow-500 text-sm"></i>
+            </div>
+            <div class="flex md:hidden absolute bottom-1/4 -left-3 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(59,130,246,0.3)] z-30 float-animate"
+                style="animation-delay: 0.8s; animation-duration: 4.5s;">
+                <i class="fab fa-python text-blue-500 text-sm"></i>
+            </div>
+            <div class="flex md:hidden absolute -bottom-3 right-2 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(168,85,247,0.3)] z-30 float-animate"
+                style="animation-delay: 2s; animation-duration: 6s;">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-purple-500">
+                    <path d="M24 24H0V0h24L12 12Z" />
+                </svg>
+            </div>
+            <div class="flex md:hidden absolute -top-3 right-1/4 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(6,182,212,0.3)] z-30 float-animate"
+                style="animation-delay: 3s; animation-duration: 5.5s;">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-cyan-400">
+                    <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l3.67 3.719L21.684 24h7.357l-9.686-9.686z" />
+                </svg>
+            </div>
+            <div class="flex md:hidden absolute -bottom-2 left-1/4 w-8 h-8 bg-[#0a0a0a]/90 backdrop-blur-md border border-gray-800 rounded-full items-center justify-center shadow-[0_0_12px_rgba(249,115,22,0.3)] z-30 float-animate"
+                style="animation-delay: 1.2s; animation-duration: 5s;">
+                <i class="fas fa-database text-orange-500 text-sm"></i>
             </div>
 
         </div>
