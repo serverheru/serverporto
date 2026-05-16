@@ -7,9 +7,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Software Engineer</title>
-    <!-- Menggunakan Tailwind CSS dari CDN untuk desain UI yang cepat dan modern -->
+    <meta name="description" content="Portfolio Lalu Hairul Umam — Web Developer, Mobile App Developer, dan Software Engineer dari UIN Malang.">
+    <title>Lalu Hairul Umam | Software Engineer & Web Developer</title>
+    <!-- Google Fonts: Inter + Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        mono: ['Fira Code', 'ui-monospace', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
     <!-- FontAwesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- File CSS Eksternal -->
@@ -30,26 +47,23 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-900">
+    <nav class="fixed w-full bg-black/80 backdrop-blur-lg z-50 border-b border-white/[0.05]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="#beranda"
-                    class="flex-shrink-0 font-bold text-2xl tracking-tighter text-white hover:text-gray-300 transition">
-                    Dev<span class="text-blue-500">.</span>Portfolio
+                    class="flex-shrink-0 font-extrabold text-xl tracking-tight text-white hover:text-gray-200 transition flex items-center gap-1">
+                    <span class="text-indigo-400">&lt;</span>Server.Porto<span class="text-indigo-400">/&gt;</span>
                 </a>
-                <div class="hidden xl:flex space-x-4 xl:space-x-5 text-xs xl:text-sm">
-                    <a href="#beranda" class="text-gray-400 hover:text-red-500 transition font-medium">Beranda</a>
-                    <a href="#tentang" class="text-gray-400 hover:text-yellow-500 transition font-medium">Tentang</a>
-                    <a href="#layanan" class="text-gray-400 hover:text-green-500 transition font-medium">Layanan</a>
-                    <a href="#pengalaman"
-                        class="text-gray-400 hover:text-blue-500 transition font-medium">Pengalaman</a>
-                    <a href="#pendidikan"
-                        class="text-gray-400 hover:text-yellow-500 transition font-medium">Pendidikan</a>
-                    <a href="#sertifikat"
-                        class="text-gray-400 hover:text-blue-500 transition font-medium">Sertifikat</a>
-                    <a href="#proyek" class="text-gray-400 hover:text-green-500 transition font-medium">Proyek</a>
-                    <a href="#github" class="text-gray-400 hover:text-white transition font-medium">GitHub</a>
-                    <a href="#kontak" class="text-gray-400 hover:text-blue-500 transition font-medium">Kontak</a>
+                <div class="hidden xl:flex items-center space-x-1 text-xs xl:text-sm">
+                    <a href="#beranda" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Beranda</a>
+                    <a href="#tentang" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Tentang</a>
+                    <a href="#layanan" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Layanan</a>
+                    <a href="#pengalaman" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Pengalaman</a>
+                    <a href="#pendidikan" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Pendidikan</a>
+                    <a href="#sertifikat" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Sertifikat</a>
+                    <a href="#proyek" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Proyek</a>
+                    <a href="#github" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">GitHub</a>
+                    <a href="#kontak" class="ml-2 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition font-semibold text-xs btn-shimmer">Kontak</a>
                 </div>
                 <!-- Tombol Hamburger Premium -->
                 <div class="xl:hidden">
@@ -129,41 +143,59 @@
 
     <!-- Hero Section -->
     <section id="beranda"
-        class="min-h-screen pt-32 pb-20 flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
+        class="relative min-h-screen pt-32 pb-20 flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 gap-12">
         <div class="flex-1 text-center md:text-left scroll-animate" data-anim="blur-in">
-            <h2 class="text-gray-400 font-semibold tracking-widest uppercase text-xs mb-3 letter-spacing-2">Halo,
-                perkenalkan saya</h2>
+            <div class="section-badge mb-5"><i class="fas fa-terminal"></i> Available for Work</div>
+            <h2 class="text-gray-400 font-semibold tracking-widest uppercase text-xs mb-3">Halo, perkenalkan saya</h2>
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
-                Seorang <br class="hidden md:block" />
-                <!-- Teks Mengetik dengan gradasi warna -->
-                <span id="typing-text"
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"></span><span
-                    class="typing-cursor">|</span>
+                Seorang
+                <!-- whitespace-nowrap: teks tidak pernah wrap; overflow-hidden: tinggi selalu 1 baris tepat -->
+                <span class="block overflow-hidden whitespace-nowrap">
+                    <span id="typing-text"
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400"></span><span
+                        class="typing-cursor text-indigo-400">|</span>
+                </span>
             </h1>
-            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                Seorang mahasiswa Perpustakaan dan Sains Informasi yang berfokus pada pengembangan Web dan Aplikasi
-                Mobile, dengan hobi di bidang kreasi visual.
+            <p class="text-base text-gray-500 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                Mahasiswa Perpustakaan &amp; Sains Informasi yang berfokus pada pengembangan Web/App dan Ketertarikan akan keilmuan Data, 
+                dengan hobi di bidang kreasi visual seperti Foto & Video Maker.
             </p>
-            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-10">
                 <a href="#proyek"
-                    class="magnetic-btn px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition glow-white transform hover:-translate-y-1 text-sm sm:text-base">Lihat
-                    Karya Saya</a>
+                    class="magnetic-btn btn-shimmer px-7 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition shadow-[0_0_25px_rgba(99,102,241,0.35)] transform hover:-translate-y-1 text-sm"><i class="fas fa-eye mr-2"></i>Lihat Karya</a>
                 <a href="#kontak"
-                    class="magnetic-btn px-8 py-4 bg-transparent text-white font-medium rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-400 transition transform hover:-translate-y-1 text-sm sm:text-base">Hubungi
-                    Saya</a>
+                    class="magnetic-btn btn-shimmer px-7 py-3.5 bg-transparent text-white font-semibold rounded-xl border border-white/10 hover:border-indigo-500/60 hover:bg-indigo-500/10 hover:text-indigo-300 transition transform hover:-translate-y-1 text-sm"><i class="fas fa-paper-plane mr-2"></i>Hubungi Saya</a>
                 <a href="./document/CV.pdf" target="_blank" download="CV_Lalu_Hairul_Umam.pdf"
-                    class="magnetic-btn px-8 py-4 bg-[#0a0a0a] text-gray-300 font-medium rounded-full border border-gray-800 hover:border-green-500 hover:text-green-400 transition transform hover:-translate-y-1 text-sm sm:text-base"><i
-                        class="fas fa-file-download mr-2"></i> Unduh CV</a>
+                    class="magnetic-btn px-7 py-3.5 bg-transparent text-gray-400 font-medium rounded-xl border border-white/[0.07] hover:border-green-500/50 hover:text-green-400 transition transform hover:-translate-y-1 text-sm"><i
+                        class="fas fa-file-download mr-2"></i>Unduh CV</a>
+            </div>
+            <!-- Stats Bar -->
+            <div class="inline-flex items-center bg-white/[0.03] border border-white/[0.07] rounded-2xl overflow-hidden">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">8+</span>
+                    <span class="hero-stat-label">Proyek</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">5</span>
+                    <span class="hero-stat-label">Sertifikat</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">3+</span>
+                    <span class="hero-stat-label">Tahun Coding</span>
+                </div>
             </div>
         </div>
-        <div class="flex-1 w-full max-w-[260px] md:max-w-md mx-auto relative scroll-animate float-animate"
+        <div class="flex-1 w-full max-w-[260px] md:max-w-sm mx-auto relative scroll-animate float-animate"
             data-anim="fade-right" data-delay="300">
-            <!-- Foto Profil -->
-            <div
-                class="aspect-square bg-black rounded-full flex flex-col items-center justify-center border-4 border-gray-800 shadow-[0_0_50px_rgba(255,255,255,0.05)] overflow-hidden relative group hover:border-white transition duration-500">
-                <img src="image/Profile.jpeg" alt="Foto Profil"
-                    class="w-full h-full object-cover z-10 transition duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-black/20 z-20 pointer-events-none">
+            <!-- Foto Profil dengan Conic Ring -->
+            <div class="relative w-full aspect-square">
+                <div class="profile-ring"></div>
+                <div class="profile-ring-mask"></div>
+                <div
+                    class="absolute inset-[3px] rounded-full overflow-hidden z-10 group">
+                    <img src="image/Profile.jpeg" alt="Foto Profil Lalu Hairul Umam"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent pointer-events-none"></div>
                 </div>
             </div>
 
@@ -201,17 +233,11 @@
     </section>
 
     <!-- Tentang & Keahlian -->
-    <section id="tentang" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+    <section id="tentang" class="py-24 bg-[#050505] border-t border-white/[0.04] relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Keahlian & Teknologi</h2>
-                <!-- Garis Aksen 4 Warna -->
-                <div class="flex justify-center gap-2">
-                    <div class="w-8 h-1 bg-red-500 rounded-full"></div>
-                    <div class="w-8 h-1 bg-yellow-500 rounded-full"></div>
-                    <div class="w-8 h-1 bg-green-500 rounded-full"></div>
-                    <div class="w-8 h-1 bg-blue-500 rounded-full"></div>
-                </div>
+                <div class="section-badge justify-center"><i class="fas fa-code"></i> Tech Stack</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Keahlian &amp; Teknologi</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="scroll-animate" data-anim="fade-left">
@@ -269,11 +295,11 @@
     </section>
 
     <!-- Layanan -->
-    <section id="layanan" class="py-24 bg-black border-t border-gray-900 relative">
+    <section id="layanan" class="py-24 bg-black border-t border-white/[0.04] relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Layanan & Spesialisasi</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+                <div class="section-badge justify-center"><i class="fas fa-briefcase"></i> Apa yang Saya Tawarkan</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Layanan &amp; Spesialisasi</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-[#0a0a0a] rounded-3xl p-8 border border-gray-800 scroll-animate glow-blue group tilt-card"
@@ -305,11 +331,11 @@
     </section>
 
     <!-- Pengalaman Organisasi -->
-    <section id="pengalaman" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+    <section id="pengalaman" class="py-24 bg-[#050505] border-t border-white/[0.04] relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Pengalaman Organisasi</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+                <div class="section-badge justify-center"><i class="fas fa-users"></i> Organisasi &amp; Kontribusi</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Pengalaman Organisasi</h2>
             </div>
             <div class="relative">
                 <!-- Slider Navigation -->
@@ -413,11 +439,11 @@
     </section>
 
     <!-- Pendidikan -->
-    <section id="pendidikan" class="py-24 bg-black border-t border-gray-900 relative">
+    <section id="pendidikan" class="py-24 bg-black border-t border-white/[0.04] relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Riwayat Pendidikan</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+                <div class="section-badge justify-center"><i class="fas fa-graduation-cap"></i> Riwayat Akademik</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Riwayat Pendidikan</h2>
             </div>
             <div class="max-w-3xl mx-auto">
                 <div class="relative pl-8 sm:pl-32 py-6 group scroll-animate" data-anim="fade-left" data-delay="100">
@@ -493,11 +519,11 @@
     </section>
 
     <!-- Sertifikat & Penghargaan -->
-    <section id="sertifikat" class="py-24 bg-[#050505] border-t border-gray-900 relative">
+    <section id="sertifikat" class="py-24 bg-[#050505] border-t border-white/[0.04] relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Sertifikat & Penghargaan</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+                <div class="section-badge justify-center"><i class="fas fa-award"></i> Pencapaian</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Sertifikat &amp; Penghargaan</h2>
             </div>
             <div
                 class="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory hide-scrollbar cursor-grab slider-container">
@@ -566,11 +592,11 @@
     </section>
 
     <!-- Proyek Portofolio -->
-    <section id="proyek" class="py-24 bg-black border-t border-gray-900">
+    <section id="proyek" class="py-24 bg-black border-t border-white/[0.04]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Karya Unggulan</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full"></div>
+                <div class="section-badge justify-center"><i class="fas fa-rocket"></i> Portofolio</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Karya Unggulan</h2>
             </div>
 
             <div class="flex flex-col gap-24 md:gap-32 mt-12">
@@ -646,7 +672,7 @@
                                 <div class="ml-3 h-2 w-24 bg-gray-800/80 rounded-full"></div>
                             </div>
                             <div class="relative flex-1 w-full overflow-hidden">
-                                <img src="./image/e-praktikum-sql.png" alt="E-Praktikum SQL"
+                                <img src="./image/2.png" alt="E-Praktikum SQL"
                                     class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700 group-hover:scale-110">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none">
@@ -992,13 +1018,13 @@
     </section>
 
     <!-- Aktivitas GitHub -->
-    <section id="github" class="py-24 bg-[#050505] border-t border-gray-900">
+    <section id="github" class="py-24 bg-[#050505] border-t border-white/[0.04]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-animate" data-anim="fade-down">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Aktivitas GitHub</h2>
-                <div class="w-20 h-1 bg-gray-500 mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-400 font-mono text-sm tracking-widest">USER: <span id="gh-username-display"
-                        class="text-white font-bold">...</span></p>
+                <div class="section-badge justify-center"><i class="fab fa-github"></i> Open Source</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 section-title">Aktivitas GitHub</h2>
+                <p class="text-gray-400 font-mono text-sm tracking-widest mt-6">USER: <span id="gh-username-display"
+                        class="text-indigo-400 font-bold">...</span></p>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-10">
@@ -1064,11 +1090,12 @@
     </section>
 
     <!-- Kontak -->
-    <section id="kontak" class="py-32 bg-[#050505] border-t border-gray-900 text-white">
+    <section id="kontak" class="py-32 bg-[#050505] border-t border-white/[0.04] text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-animate" data-anim="blur-in">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Mari Berkolaborasi.</h2>
-                <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">Saya selalu terbuka untuk
+                <div class="section-badge justify-center mb-4"><i class="fas fa-handshake"></i> Kolaborasi</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 section-title">Mari Berkolaborasi.</h2>
+                <p class="text-gray-400 text-base leading-relaxed max-w-xl mx-auto">Saya selalu terbuka untuk
                     mendiskusikan pekerjaan pengembangan produk, peluang kemitraan, atau sekadar bertukar pikiran.</p>
             </div>
 
@@ -1152,40 +1179,47 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- File JS Eksternal -->
     <script src="script.js"></script>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-gray-900 py-12">
+    <footer class="bg-black border-t border-white/[0.04] py-16">
         <div
-            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
                 <a href="#beranda"
-                    class="font-bold text-2xl tracking-tighter text-white hover:text-gray-300 transition">
-                    Dev<span class="text-blue-500">.</span>Portfolio
+                    class="font-extrabold text-xl tracking-tight text-white hover:text-gray-200 transition flex items-center gap-1 justify-center md:justify-start mb-2">
+                    <span class="text-indigo-400">&lt;</span>Heru<span class="text-indigo-400">/&gt;</span>
                 </a>
-                <p class="text-gray-500 text-sm mt-2">Membangun masa depan digital, satu baris kode setiap kalinya.</p>
+                <p class="text-gray-500 text-sm">Membangun masa depan digital, satu baris kode setiap kalinya.</p>
             </div>
-            <div class="flex space-x-6 justify-center">
-                <a href="https://github.com/serverheru" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-                    class="text-gray-500 hover:text-white transition transform hover:scale-110 text-xl"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/lalu-hairul-umam-074756281/" target="_blank"
-                    rel="noopener noreferrer" aria-label="LinkedIn"
-                    class="text-gray-500 hover:text-blue-500 transition transform hover:scale-110 text-xl"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/serverheru/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    class="text-gray-500 hover:text-pink-500 transition transform hover:scale-110 text-xl"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@chaerul45" target="_blank" rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    class="text-gray-500 hover:text-red-500 transition transform hover:scale-110 text-xl"><i
-                        class="fab fa-youtube"></i></a>
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex space-x-5 justify-center">
+                    <a href="https://github.com/serverheru" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                        class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/[0.07] text-gray-500 hover:text-white hover:border-white/20 hover:bg-white/5 transition text-base"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lalu-hairul-umam-074756281/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"
+                        class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/[0.07] text-gray-500 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/5 transition text-base"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/serverheru/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/[0.07] text-gray-500 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/5 transition text-base"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@chaerul45" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube"
+                        class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/[0.07] text-gray-500 hover:text-red-400 hover:border-red-500/40 hover:bg-red-500/5 transition text-base"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
-        <div class="text-center text-gray-600 text-xs mt-10">
-            &copy; 2023 Dev.Portfolio. All rights reserved.
+        <div class="text-center text-gray-700 text-xs mt-10">
+            &copy; 2026 Lalu Hairul Umam. All rights reserved.
         </div>
     </footer>
 </body>

@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     const typingTextElement = document.getElementById('typing-text');
     if (typingTextElement) {
-        const words = ["Web Developer", "Mobile App Developer", "Software Engineer Enthusiast", "Tech Explorer"];
+        const words = ["Junior Programmer", "Web/App Developer", "Data Science Enthusiast", "Software Interest", "Tech Explorer"];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -616,11 +616,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 600) {
-                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                backToTopBtn.classList.add('visible');
             } else {
-                backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                backToTopBtn.classList.remove('visible');
             }
         });
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
