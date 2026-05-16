@@ -478,10 +478,26 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error memuat profil GitHub:', error));
 
-        // Fetch Repositori Terbaru (Maksimal 3)
-        fetchGitHubWithCache(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`, `gh_repos_${githubUsername}`)
+        // Fetch Repositori Sematan (Pinned Repositories)
+        // Karena GitHub REST API tidak memiliki endpoint untuk Pinned Repos,
+        // silakan masukkan nama repositori yang Anda pin ke dalam array di bawah ini:
+        const pinnedRepos = ['SIFORSIP_PENGEMBANGAN_MANDIRI_LALU_HAIRUL_UMAM', 'OrbitList.access', 'Sistem-Kasir']; // <-- UBAH NAMA REPO DI SINI
+
+        // Fallback: Jika array masih default, tampilkan repo terbaru agar web tidak error.
+        const isDefault = pinnedRepos.includes('nama-repo-1');
+
+        const fetchReposPromise = isDefault
+            ? fetchGitHubWithCache(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`, `gh_repos_${githubUsername}`)
+            : Promise.all(
+                pinnedRepos.map(repoName =>
+                    fetchGitHubWithCache(`https://api.github.com/repos/${githubUsername}/${repoName}`, `gh_repo_${githubUsername}_${repoName}`)
+                        .catch(e => null) // Abaikan jika ada repo yang salah ketik/tidak ditemukan
+                )
+            ).then(repos => repos.filter(repo => repo && repo.name)); // Filter data valid
+
+        fetchReposPromise
             .then(repos => {
-                if (!Array.isArray(repos)) throw new Error('Data repositori tidak valid');
+                if (!Array.isArray(repos) || repos.length === 0) throw new Error('Data repositori tidak valid');
                 ghReposContainer.innerHTML = '';
                 
                 const glowClasses = ['glow-red', 'glow-yellow', 'glow-green', 'glow-blue'];
@@ -535,8 +551,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 ghReposContainer.innerHTML = `
                     <div class="col-span-1 sm:col-span-2 xl:col-span-3 bg-red-500/10 border border-red-500/20 rounded-2xl p-6 text-center">
                         <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-3"></i>
-                        <p class="text-red-400 font-medium">Gagal memuat repositori terbaru</p>
-                        <p class="text-red-500/70 text-sm mt-1">Hal ini biasa terjadi karena batasan akses server (Rate Limit). Silakan muat ulang halaman beberapa saat lagi.</p>
+                        <p class="text-red-400 font-medium">Gagal memuat repositori GitHub</p>
+                        <p class="text-red-500/70 text-sm mt-1">Pastikan nama repositori pada variabel 'pinnedRepos' sudah benar, atau limit API telah tercapai.</p>
                     </div>
                 `;
             });
